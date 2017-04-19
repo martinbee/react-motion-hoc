@@ -8,7 +8,7 @@ const MotionWrapepdElement = MotionHOC(ElementToWrap);
 export default function App() {
   return (
     <div className="App">
-      <MotionWrapepdElement text={"hello world"} />
+      <MotionWrapepdElement />
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import React from 'react';
-import Motion from 'react-motion';
 import _ from 'lodash';
+import {Motion, spring} from 'react-motion';
+
 
 export default function MotionHOC(WrappedElement) {
   console.log(WrappedElement);
 
   return (
     <Motion defaultStyle={{ x: 0 }} style={{ x: spring(10) }}>
-      {interpolatingStyle => <WrappedElement style={_.merge(interpolatingStyle, style)} {...this.props} />}
+      {value => <WrappedElement {..._.merge(this.props, { text: value.x  })} />}
     </Motion>
   );
 }
