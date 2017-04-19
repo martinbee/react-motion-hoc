@@ -1,14 +1,12 @@
 import React from 'react';
 import './App.css';
-import MotionHOC from './components/MotionHOC';
-
-const ElementToWrap = ({ text }) => <div>{text}</div>;
-const MotionWrapepdElement = MotionHOC(ElementToWrap);
+import ElementToWrap from './components/ElementToWrap';
 
 export default function App() {
+  console.log(ElementToWrap);
   return (
     <div className="App">
-      <MotionWrapepdElement />
+      <ElementToWrap />
     </div>
   );
 }
