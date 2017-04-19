@@ -6,7 +6,7 @@ export default function MotionHOC(WrappedElement) {
   return function(props) {
 		return (
 			<Motion defaultStyle={{ x: 0 }} style={{ x: spring(10) }}>
-				{value => <WrappedElement text={value.x} />}
+				{value => <WrappedElement {...props} {...value} />}
 			</Motion>
 		);
 	}
