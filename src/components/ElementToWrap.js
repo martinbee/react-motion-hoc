@@ -1,5 +1,5 @@
 import React from 'react';
-import MotionHOC from './components/MotionHOC';
+import MotionHOC from './MotionHOC';
 
 function ElementToWrap({ text }) {
   return <div>{text}</div>;
