@@ -5,7 +5,7 @@ import ElementToWrap from './components/ElementToWrap';
 export default function App() {
   return (
     <div className="App">
-      <ElementToWrap text={"React motion spring is at "}/>
+      <ElementToWrap text={"React motion spring is at "} />
     </div>
   );
 }

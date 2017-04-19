@@ -1,8 +1,8 @@
 import React from 'react';
 import MotionHOC from './MotionHOC';
 
-function ElementToWrap(props) {
-  return <div>{props.text}{props.x}</div>;
+function ElementToWrap({ text, x }) {
+  return <div>{text}{x}</div>;
 }
 
 export default MotionHOC(ElementToWrap);
