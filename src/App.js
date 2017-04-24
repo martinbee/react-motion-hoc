@@ -10,7 +10,11 @@ export default function App() {
       <ElementToWrap text={"React motion spring is at "} />
       <ElementToWrapWithCurry text={"React motion spring is at "} />
       <MotionHOCNoComp animation="Grow">
-        <div>Hello world</div>
+        <div>
+          <ul>
+            <li>Hello world</li>
+          </ul>
+        </div>
       </MotionHOCNoComp>
     </div>
   );

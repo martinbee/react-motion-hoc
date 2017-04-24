@@ -4,12 +4,8 @@ import {Motion, spring} from 'react-motion';
 
 export default function MotionHOCNoComp(props) {
   return (
-    <Motion defaultStyle={{ x: 0 }} style={{ x: spring(10) }}>
-      {value => {
-        console.log(value);
-
-        return props.children;
-      }}
+    <Motion defaultStyle={{ height: 0, width: 0 }} style={{ height: spring(100), width: spring(100) }}>
+      {style => React.cloneElement(props.children, { style })}
     </Motion>
   );
 }
