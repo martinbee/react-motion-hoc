@@ -1,3 +1,4 @@
+// dis
 import React from 'react';
 import _ from 'lodash';
 import {Motion, spring} from 'react-motion';
@@ -16,7 +17,9 @@ function MotionHOC(animationType, WrappedElement) {
   return function(props) {
     return (
       <Motion defaultStyle={styleSetup.default} style={styleSetup.style}>
-        {value => <WrappedElement {...props} {...value} />}
+        {value => {
+          return React.createElement(WrappedElement, { ...props, style: value });
+        }}
       </Motion>
     );
   }
