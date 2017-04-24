@@ -1,18 +1,10 @@
-// dis
 import React from 'react';
 import _ from 'lodash';
-import {Motion, spring} from 'react-motion';
-
-function getStyleSetup(animationType) {
-  if (animationType === "Grow") {
-    return { default: { height: 0, width: 0 }, style: { height: spring(50), width: spring(50) }};
-  } else if (animationType === "FadeIn") {
-    return { default: { opacity: 0 }, style: { opacity: spring(1) }};
-  }
-}
+import { Motion } from 'react-motion';
+import getAnimationStyles from '../utils/getAnimationStyles';
 
 function MotionHOC(animationType, WrappedElement) {
-  const styleSetup = getStyleSetup(animationType);
+  const styleSetup = getAnimationStyles(animationType);
 
   return function(props) {
     return (

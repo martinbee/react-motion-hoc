@@ -9,11 +9,21 @@ export default function App() {
     <div className="App">
       <ElementToWrap text={"React motion spring is at "} />
       <ElementToWrapWithCurry text={"React motion spring is at "} />
-      <MotionHOCNoComp animation="Grow">
+      <MotionHOCNoComp animation="slideRight">
         <div>
+          Slide right
+        </div>
+      </MotionHOCNoComp>
+      <MotionHOCNoComp animation="grow">
+        <div style={{ background: 'green' }}>
           <ul>
             <li>Hello world</li>
           </ul>
+        </div>
+      </MotionHOCNoComp>
+      <MotionHOCNoComp animation="fadeIn">
+        <div>
+          Fade in
         </div>
       </MotionHOCNoComp>
     </div>

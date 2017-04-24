@@ -5,4 +5,4 @@ function ElementToWrap({ text, x }) {
   return <div>{text}{x}</div>;
 }
 
-export default MotionHOCWithCurry('Grow')(ElementToWrap);
+export default MotionHOCWithCurry('grow')(ElementToWrap);
